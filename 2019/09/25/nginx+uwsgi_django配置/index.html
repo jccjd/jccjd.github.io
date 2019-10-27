@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>nginx+uwsgi_django配置 - Jccjd | Blogs</title>
+<title>nginx+uwsgi_django配置 - Jccjd</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="http://jccjd.top/2019/09/25/nginx+uwsgi_django%E9%85%8D%E7%BD%AE/">
@@ -12,18 +12,18 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="nginx+uwsgi_django配置">
 <meta property="og:url" content="http:&#x2F;&#x2F;jccjd.top&#x2F;2019&#x2F;09&#x2F;25&#x2F;nginx+uwsgi_django%E9%85%8D%E7%BD%AE&#x2F;index.html">
-<meta property="og:site_name" content="Jccjd | Blogs">
+<meta property="og:site_name" content="Jccjd">
 <meta property="og:description" content="在服务器端配置nginx + uwsgi+ django,简单来讲就是将django的项目通过nginx跑起来，在阅读djang文档的时候就读到一句非常有意思的话，  我们是框架方面的专家， 但在在服务方面不是  在实际的项目中显然是不能使用django自带的wsgi去跑的， 我们希望的是由nginx来提供服务的. 下载uwsgi首先三者之间的顺序是 nginx -&amp;gt; （uwsgi -&amp;gt">
 <meta property="og:locale" content="zh-hans">
-<meta property="og:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;favicon.ico.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;images&#x2F;favicon.ico.png">
 <meta property="og:updated_time" content="2019-10-25T07:39:38.442Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;favicon.ico.png">
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/favicon.ico.png"},"url":"http://jccjd.top","image":"http://jccjd.top/favicon.ico.png","description":"is a blogs","author":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"","url":"http://jccjd.top/2019/09/25/nginx+uwsgi_django%E9%85%8D%E7%BD%AE/","headline":"nginx+uwsgi_django配置","image":"http://jccjd.top/favicon.ico.png","datePublished":"2019-09-24T16:00:00.000Z","dateModified":"2019-10-25T07:39:38.442Z","keywords":"docs,nginx,uwsgi","description":"is a blogs","publisher":{"@type":"Organization","name":"Jccjd | Blogs","logo":{"@type":"ImageObject","url":"http://jccjd.top/favicon.ico.png"}},"author":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://jccjd.top/2019/09/25/nginx+uwsgi_django%E9%85%8D%E7%BD%AE/"}}]</script>
+<meta name="twitter:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;images&#x2F;favicon.ico.png">
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/images/favicon.ico.png"},"url":"http://jccjd.top","image":"http://jccjd.top/images/favicon.ico.png","description":"is a blogs","author":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"","url":"http://jccjd.top/2019/09/25/nginx+uwsgi_django%E9%85%8D%E7%BD%AE/","headline":"nginx+uwsgi_django配置","image":"http://jccjd.top/images/favicon.ico.png","datePublished":"2019-09-24T16:00:00.000Z","dateModified":"2019-10-25T07:39:38.442Z","keywords":"docs,nginx,uwsgi","description":"is a blogs","publisher":{"@type":"Organization","name":"Jccjd","logo":{"@type":"ImageObject","url":"http://jccjd.top/images/favicon.ico.png"}},"author":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://jccjd.top/2019/09/25/nginx+uwsgi_django%E9%85%8D%E7%BD%AE/"}}]</script>
 <link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
 <link href="/styles.d1f4718a192abf1f2afd.css" rel="stylesheet">
 <link rel="stylesheet" href="/theme.627425b74d1d504eb5d7.css">
-<script src="/config.aac98c315d2c83283333.js"></script>
+<script src="/config.362277715e104dfb1682.js"></script>
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script></head>
 <body lang="en">

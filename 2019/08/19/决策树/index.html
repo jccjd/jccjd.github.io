@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>决策树 - Jccjd | Blogs</title>
+<title>决策树 - Jccjd</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="http://jccjd.top/2019/08/19/%E5%86%B3%E7%AD%96%E6%A0%91/">
@@ -12,18 +12,18 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="决策树">
 <meta property="og:url" content="http:&#x2F;&#x2F;jccjd.top&#x2F;2019&#x2F;08&#x2F;19&#x2F;%E5%86%B3%E7%AD%96%E6%A0%91&#x2F;index.html">
-<meta property="og:site_name" content="Jccjd | Blogs">
+<meta property="og:site_name" content="Jccjd">
 <meta property="og:description" content="决策树决策树见名知意可以知道这是一个用来进行决策的东西 信息熵用来表示集合的数据的纯度 信息增益当依据某个特征对数据集进行划分时产生的子集，这时对子集求信息熵，和原始熵的差值，这个值越大越好在决策树的划分中要知道很多的数据，要知道类别，知道正例反例，需要很多的信息才能描绘出一颗决策树 在决定每次要用哪个特征划分的时候，要将当前全都的信息增益求出得到最大增益，用该特征对数据进行划分，当然这是在ID3">
 <meta property="og:locale" content="zh-hans">
-<meta property="og:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;favicon.ico.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;images&#x2F;favicon.ico.png">
 <meta property="og:updated_time" content="2019-10-25T08:07:37.203Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;favicon.ico.png">
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/favicon.ico.png"},"url":"http://jccjd.top","image":"http://jccjd.top/favicon.ico.png","description":"is a blogs","author":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Machine Learning","url":"http://jccjd.top/2019/08/19/%E5%86%B3%E7%AD%96%E6%A0%91/","headline":"决策树","image":"http://jccjd.top/favicon.ico.png","datePublished":"2019-08-18T16:00:00.000Z","dateModified":"2019-10-25T08:07:37.203Z","keywords":"Machine Learning","description":"is a blogs","publisher":{"@type":"Organization","name":"Jccjd | Blogs","logo":{"@type":"ImageObject","url":"http://jccjd.top/favicon.ico.png"}},"author":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://jccjd.top/2019/08/19/%E5%86%B3%E7%AD%96%E6%A0%91/"}}]</script>
+<meta name="twitter:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;images&#x2F;favicon.ico.png">
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/images/favicon.ico.png"},"url":"http://jccjd.top","image":"http://jccjd.top/images/favicon.ico.png","description":"is a blogs","author":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Machine Learning","url":"http://jccjd.top/2019/08/19/%E5%86%B3%E7%AD%96%E6%A0%91/","headline":"决策树","image":"http://jccjd.top/images/favicon.ico.png","datePublished":"2019-08-18T16:00:00.000Z","dateModified":"2019-10-25T08:07:37.203Z","keywords":"Machine Learning","description":"is a blogs","publisher":{"@type":"Organization","name":"Jccjd","logo":{"@type":"ImageObject","url":"http://jccjd.top/images/favicon.ico.png"}},"author":{"@type":"Person","name":"Jccjd","description":"Awesome guy.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://jccjd.top/2019/08/19/%E5%86%B3%E7%AD%96%E6%A0%91/"}}]</script>
 <link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
 <link href="/styles.d1f4718a192abf1f2afd.css" rel="stylesheet">
 <link rel="stylesheet" href="/theme.627425b74d1d504eb5d7.css">
-<script src="/config.aac98c315d2c83283333.js"></script>
+<script src="/config.362277715e104dfb1682.js"></script>
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script></head>
 <body lang="en">
