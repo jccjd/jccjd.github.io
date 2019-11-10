@@ -5,25 +5,25 @@
 <title>mysql 探究 - Jccjd</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://jccjd.top/2019/11/01/mysql%20%E6%8E%A2%E7%A9%B6/">
+<link rel="canonical" href="http://jccjd.top/2019/11/08/mysql%20%E6%8E%A2%E7%A9%B6/">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico.png">
 <meta name="description" content="什么是mysql mysql是一种关系型数据库， 是非常常用的数据库，mysql是开源的，方便扩展，mysql的默认端口是3306  mysql的两种引擎 MYISAM: 不支持事务，不支持外键，表锁，插入数据时锁定整张表，查询函数时无需扫描整表 INNODB: 支持事务，支持外键，行锁，查表总行数时，全表扫描  与sql标准不同的地方在于InnoDB存储引擎在 repeatable-read事务">
 <meta name="keywords" content="mysql">
 <meta property="og:type" content="website">
 <meta property="og:title" content="mysql 探究">
-<meta property="og:url" content="http:&#x2F;&#x2F;jccjd.top&#x2F;2019&#x2F;11&#x2F;01&#x2F;mysql%20%E6%8E%A2%E7%A9%B6&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;jccjd.top&#x2F;2019&#x2F;11&#x2F;08&#x2F;mysql%20%E6%8E%A2%E7%A9%B6&#x2F;index.html">
 <meta property="og:site_name" content="Jccjd">
 <meta property="og:description" content="什么是mysql mysql是一种关系型数据库， 是非常常用的数据库，mysql是开源的，方便扩展，mysql的默认端口是3306  mysql的两种引擎 MYISAM: 不支持事务，不支持外键，表锁，插入数据时锁定整张表，查询函数时无需扫描整表 INNODB: 支持事务，支持外键，行锁，查表总行数时，全表扫描  与sql标准不同的地方在于InnoDB存储引擎在 repeatable-read事务">
 <meta property="og:locale" content="zh-hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;images&#x2F;favicon.ico.png">
-<meta property="og:updated_time" content="2019-11-01T09:16:01.437Z">
+<meta property="og:updated_time" content="2019-11-09T01:59:13.759Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;images&#x2F;favicon.ico.png">
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"url":"http://jccjd.top","image":"http://jccjd.top/images/favicon.ico.png","description":"is a blogs","author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"","url":"http://jccjd.top/2019/11/01/mysql%20%E6%8E%A2%E7%A9%B6/","headline":"mysql 探究","image":"http://jccjd.top/images/favicon.ico.png","datePublished":"2019-11-01T09:16:01.437Z","dateModified":"2019-11-01T09:16:01.437Z","keywords":"mysql","description":"is a blogs","publisher":{"@type":"Organization","name":"Jccjd","logo":{"@type":"ImageObject","url":"http://jccjd.top/images/favicon.ico.png"}},"author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://jccjd.top/2019/11/01/mysql%20%E6%8E%A2%E7%A9%B6/"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"url":"http://jccjd.top","image":"http://jccjd.top/images/favicon.ico.png","description":"is a blogs","author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"","url":"http://jccjd.top/2019/11/08/mysql%20%E6%8E%A2%E7%A9%B6/","headline":"mysql 探究","image":"http://jccjd.top/images/favicon.ico.png","datePublished":"2019-11-07T16:00:00.000Z","dateModified":"2019-11-09T01:59:13.759Z","keywords":"mysql","description":"is a blogs","publisher":{"@type":"Organization","name":"Jccjd","logo":{"@type":"ImageObject","url":"http://jccjd.top/images/favicon.ico.png"}},"author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://jccjd.top/2019/11/08/mysql%20%E6%8E%A2%E7%A9%B6/"}}]</script>
 <link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
 <link href="/styles.d1f4718a192abf1f2afd.css" rel="stylesheet">
 <link rel="stylesheet" href="/theme.627425b74d1d504eb5d7.css">
-<script src="/config.53e45317ff0e20adc7e0.js"></script>
+<script src="/config.b72a82a514420bdcb29a.js"></script>
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script></head>
 <body lang="en">
