@@ -7,23 +7,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="http://jccjd.top/2017/11/21/mysql%20doc/">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico.png">
-<meta name="description" content="mysql  密码修改在mysql5.6和5.7的密码修改方式发生了很大的变化，5.7是可以直接通过mysql进入数据即库然后通过下面命令直接修改即可 UPDATE mysql.user SET plugin=&amp;quot;mysql_native_password&amp;quot;, authentication_string=PASSWORD(&amp;quot;password&amp;quot;) WHERE u">
-<meta name="keywords" content="docs,MySQL">
+<meta name="description" content="mysql  密码修改在mysql5.6和5.7的密码修改方式发生了很大的变化，5.7是可以直接通过mysql进入数据即库然后通过下面命令直接修改即可 1UPDATE mysql.user SET plugin=&amp;quot;mysql_native_password&amp;quot;, authentication_string=PASSWORD(&amp;quot;password&amp;quot;) WHERE">
+<meta name="keywords" content="docs,mysql">
 <meta property="og:type" content="website">
 <meta property="og:title" content="mysql doc">
 <meta property="og:url" content="http:&#x2F;&#x2F;jccjd.top&#x2F;2017&#x2F;11&#x2F;21&#x2F;mysql%20doc&#x2F;index.html">
 <meta property="og:site_name" content="Jccjd">
-<meta property="og:description" content="mysql  密码修改在mysql5.6和5.7的密码修改方式发生了很大的变化，5.7是可以直接通过mysql进入数据即库然后通过下面命令直接修改即可 UPDATE mysql.user SET plugin=&amp;quot;mysql_native_password&amp;quot;, authentication_string=PASSWORD(&amp;quot;password&amp;quot;) WHERE u">
+<meta property="og:description" content="mysql  密码修改在mysql5.6和5.7的密码修改方式发生了很大的变化，5.7是可以直接通过mysql进入数据即库然后通过下面命令直接修改即可 1UPDATE mysql.user SET plugin=&amp;quot;mysql_native_password&amp;quot;, authentication_string=PASSWORD(&amp;quot;password&amp;quot;) WHERE">
 <meta property="og:locale" content="zh-hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;images&#x2F;favicon.ico.png">
-<meta property="og:updated_time" content="2019-10-25T07:36:21.146Z">
+<meta property="og:updated_time" content="2019-11-09T02:04:03.918Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;jccjd.top&#x2F;images&#x2F;favicon.ico.png">
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"url":"http://jccjd.top","image":"http://jccjd.top/images/favicon.ico.png","description":"is a blogs","author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"","url":"http://jccjd.top/2017/11/21/mysql%20doc/","headline":"mysql doc","image":"http://jccjd.top/images/favicon.ico.png","datePublished":"2017-11-20T16:00:00.000Z","dateModified":"2019-10-25T07:36:21.146Z","keywords":"docs,MySQL","description":"is a blogs","publisher":{"@type":"Organization","name":"Jccjd","logo":{"@type":"ImageObject","url":"http://jccjd.top/images/favicon.ico.png"}},"author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://jccjd.top/2017/11/21/mysql%20doc/"}}]</script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"url":"http://jccjd.top","image":"http://jccjd.top/images/favicon.ico.png","description":"is a blogs","author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"","url":"http://jccjd.top/2017/11/21/mysql%20doc/","headline":"mysql doc","image":"http://jccjd.top/images/favicon.ico.png","datePublished":"2017-11-20T16:00:00.000Z","dateModified":"2019-11-09T02:04:03.918Z","keywords":"docs,mysql","description":"is a blogs","publisher":{"@type":"Organization","name":"Jccjd","logo":{"@type":"ImageObject","url":"http://jccjd.top/images/favicon.ico.png"}},"author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://jccjd.top/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://jccjd.top/2017/11/21/mysql%20doc/"}}]</script>
 <link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
 <link href="/styles.d1f4718a192abf1f2afd.css" rel="stylesheet">
 <link rel="stylesheet" href="/theme.627425b74d1d504eb5d7.css">
-<script src="/config.53e45317ff0e20adc7e0.js"></script>
+<script src="/config.b72a82a514420bdcb29a.js"></script>
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script></head>
 <body lang="en">
