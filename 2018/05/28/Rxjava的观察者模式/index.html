@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Rxjava的观察者模式 - Jccjd | Blog</title>
+<title></title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://yoursite.com/2018/05/28/Rxjava%E7%9A%84%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">
+<link rel="canonical" href="">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico.png">
 
 <meta name="description" content="观察者模式面向的需求是：A 对象（观察者）对B对象（被观察者）的某种变化高度敏感，需要在B变化的一瞬间做出反应。经典例子：警察抓小偷，警察需要在小偷伸手作案的时候实施抓捕。警察是观察者，小偷是被观察者，警察需要时刻盯着小偷的一举一动，才能保证不会漏过任何瞬间。  RxJava有四个基本概念：Observable（可观察者，即被观察者），Observer（观察者），subscribe（订阅），事件。">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Rxjava的观察者模式">
 <meta property="og:url" content="http://yoursite.com/2018/05/28/Rxjava%E7%9A%84%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Jccjd | Blog">
@@ -23,24 +23,30 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/favicon.ico.png">
 
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://yoursite.com/images/favicon.ico.png"},"url":"http://yoursite.com","image":"http://yoursite.com/images/favicon.ico.png","description":"Nothing is true, Everything is permitted.","author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://yoursite.com/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"","url":"http://yoursite.com/2018/05/28/Rxjava%E7%9A%84%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/","headline":"Rxjava的观察者模式","image":"http://yoursite.com/images/favicon.ico.png","datePublished":"2018-05-27T16:00:00.000Z","dateModified":"2020-02-09T08:38:27.000Z","keywords":"Android","description":"Nothing is true, Everything is permitted.","publisher":{"@type":"Organization","name":"Jccjd | Blog","logo":{"@type":"ImageObject","url":"http://yoursite.com/images/favicon.ico.png"}},"author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://yoursite.com/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2018/05/28/Rxjava%E7%9A%84%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"}}]</script>
+
 
 
 <link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
 <link href="/styles.e4c22be5bb2c26eab146.css" rel="stylesheet">
 
-<link rel="stylesheet" href="/theme.241d8099dafee6f9afc9.css" is="theme">
+<link rel="stylesheet" href="/theme..css" is="theme">
 
 
-<script src="/config.80f5cc35fd222ad0401b.js"></script>
+<script src="/config..js"></script>
 
 
-<script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script>
+
 
 <meta name="generator" content="Hexo 4.2.0"></head>
 <body lang="en">
 <is-a></is-a>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({
+  showProcessingMessages: false,
+  messageStyle: 'none',
+  tex2jax: { inlineMath: [['s;,'s;], ['\\(','\\)']] }
+})
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/runtime.1720a40670866f12654e.js"></script>
 <script src="/polyfills.69a7b8a907a7ac9da988.js"></script>
 <script src="/main.12c3a04fa47641f902c2.js"></script>
