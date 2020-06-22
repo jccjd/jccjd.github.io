@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title></title>
+<title>nginx+uwsgi_django配置 - Jccjd | Blog</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="">
+<link rel="canonical" href="http://yoursite.com/2019/09/25/nginx+uwsgi_django%E9%85%8D%E7%BD%AE/">
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico.png">
 
 <meta name="description" content="在服务器端配置nginx + uwsgi+ django,简单来讲就是将django的项目通过nginx跑起来，在阅读djang文档的时候就读到一句非常有意思的话，  我们是框架方面的专家， 但在在服务方面不是  在实际的项目中显然是不能使用django自带的wsgi去跑的， 我们希望的是由nginx来提供服务的. 下载uwsgi首先三者之间的顺序是 nginx -&gt; （uwsgi -&amp;gt">
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:title" content="nginx+uwsgi_django配置">
 <meta property="og:url" content="http://yoursite.com/2019/09/25/nginx+uwsgi_django%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Jccjd | Blog">
@@ -25,19 +25,20 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/favicon.ico.png">
 
-
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://yoursite.com/images/favicon.ico.png"},"url":"http://yoursite.com","image":"http://yoursite.com/images/favicon.ico.png","description":"Nothing is true, Everything is permitted.","author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://yoursite.com/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"}},{"@context":"http://schema.org","@type":"Article","articleSection":"","url":"http://yoursite.com/2019/09/25/nginx+uwsgi_django%E9%85%8D%E7%BD%AE/","headline":"nginx+uwsgi_django配置","image":"http://yoursite.com/images/favicon.ico.png","datePublished":"2019-09-24T16:00:00.000Z","dateModified":"2020-02-09T08:37:34.000Z","keywords":"docs,nginx,uwsgi","description":"Nothing is true, Everything is permitted.","publisher":{"@type":"Organization","name":"Jccjd | Blog","logo":{"@type":"ImageObject","url":"http://yoursite.com/images/favicon.ico.png"}},"author":{"@type":"Person","name":"Jccjd","description":"Nothing is true, Everything is permitted.","image":"http://yoursite.com/images/favicon.ico.png"},"inLanguage":{"@type":"Language","alternateName":"en"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2019/09/25/nginx+uwsgi_django%E9%85%8D%E7%BD%AE/"}}]</script>
 
 
 <link href="//fonts.googleapis.com/css?family=Baloo+Bhaijaan|Inconsolata|Josefin+Sans|Montserrat" rel="stylesheet">
 <link href="/styles.e4c22be5bb2c26eab146.css" rel="stylesheet">
 
-<link rel="stylesheet" href="/theme..css" is="theme">
+<link rel="stylesheet" href="/theme.241d8099dafee6f9afc9.css" is="theme">
 
 
-<script src="/config..js"></script>
+<script src="/config.694e8db3317423b40482.js"></script>
 
 
-
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','UA-00000000-0');</script>
 
 <meta name="generator" content="Hexo 4.2.0"></head>
 <body lang="en">
